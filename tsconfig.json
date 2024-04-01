@@ -16,16 +16,33 @@
 
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
+    // "typeRoots": ["./node_modules/@types"],
 
     /* alias */
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-    },
+      "@action/*": ["src/action/*"],
+      "@asserts/*": ["src/asserts/*"],
+      "@component/*": ["src/component/*"],
+      "@config/*": ["src/config/*"],
+      "@css/*": ["src/css/*"],
+      "@data/*": ["src/data/*"],
+      "@event/*": ["src/event/*"],
+      "@helper/*": ["src/helper/*"],
+      "@hook/*": ["src/hook/*"],
+      "@layout/*": ["src/layout/*"],
+      "@page/*": ["src/page/*"],
+      "@provider/*": ["src/provider/*"],
+      "@route/*": ["src/route/*"],
+      "@theme/*": ["src/theme/*"],
+      "@type/*": ["src/type/*"],
+      "@util/*": ["src/util/*"]
+    }
   },
   "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

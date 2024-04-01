@@ -3,5 +3,14 @@ tabWidth: 2
 semi: false
 singleQuote: true
 jsxSingleQuote: true
+importOrderSeparation: true
+importOrderSortSpecifiers: true
+importOrder:
+  - '^@/(.*)$'
+  - '^@[^/]+/.*$'
+  - '^[./]'
+  - '^@css/'
+  - '\.css$'
 plugins:
-  - "prettier-plugin-tailwindcss"
+  - 'prettier-plugin-tailwindcss'
+  - '@trivago/prettier-plugin-sort-imports'
