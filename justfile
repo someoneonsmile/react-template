@@ -19,7 +19,7 @@ check:
 	pnpm run check
 
 build:
-	pnpm run build
+	pnpm run build-local
 
 deploy: build
 	# 每一行都是新 Shell 运行, 可通过转义换行符，或者 Shebang 方式运行
@@ -28,4 +28,5 @@ deploy: build
 	# set -euxo pipefail
 	# #!/usr/bin/env bash
 	sudo rm -rf /usr/share/nginx/poetry/* && \
-	sudo cp -r dist/* /usr/share/nginx/poetry
+	sudo cp -r dist/* /usr/share/nginx/poetry && \
+	sudo systemctl restart nginx

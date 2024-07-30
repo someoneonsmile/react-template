@@ -1,5 +1,7 @@
 import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom'
 
+import PoetryPage from '@page/PoetryPage'
+
 const router = createBrowserRouter(
   [
     {
@@ -9,12 +11,12 @@ const router = createBrowserRouter(
         // https://stackoverflow.com/a/75467698
         {
           index: true,
-          // element: <Navigate to='/poetry' replace />,
+          element: <Navigate to='/poetry' replace />,
         },
-        // {
-        //   path: '/poetry',
-        //   element: <PoetryPage />,
-        // },
+        {
+          path: '/poetry',
+          element: <PoetryPage />,
+        },
       ],
     },
   ],

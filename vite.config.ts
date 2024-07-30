@@ -1,18 +1,38 @@
 import million from 'million/compiler'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { fileURLToPath } from 'url'
-import { defineConfig, splitVendorChunkPlugin } from 'vite'
+import { defineConfig } from 'vite'
 import svgr from 'vite-plugin-svgr'
 
-import react from '@vitejs/plugin-react-swc'
+import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
+
+const ReactCompilerConfig = {
+  /* ... */
+}
+
 export default defineConfig({
   envDir: '.env',
   // base: import.meta.env.BASE_URL,
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor'
+          }
+        },
+      },
+    },
+  },
   plugins: [
     million.vite({ auto: true }),
-    react(),
+    react({
+      babel: {
+        plugins: [['babel-plugin-react-compiler', ReactCompilerConfig]],
+      },
+    }),
     svgr({
       // A minimatch pattern, or array of patterns, which specifies the files in the build the plugin should include.
       include: '**/*.svg?react',
@@ -20,7 +40,6 @@ export default defineConfig({
     visualizer({
       gzipSize: true,
     }),
-    splitVendorChunkPlugin(),
   ],
   resolve: {
     alias: [
