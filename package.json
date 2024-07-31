@@ -7,7 +7,6 @@
     "dev": "vite --host --base=/poetry",
     "check": "tsc",
     "build": "tsc && vite build --mode=production",
-    "build-local": "tsc && vite build --mode=production --base=/poetry",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
