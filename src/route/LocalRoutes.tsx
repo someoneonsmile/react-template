@@ -1,6 +1,6 @@
 import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom'
 
-import PoetryPage from '@page/PoetryPage'
+// import PoetryPage from '@page/PoetryPage'
 
 const router = createBrowserRouter(
   [
@@ -9,14 +9,14 @@ const router = createBrowserRouter(
       // element: <Layout />,
       children: [
         // https://stackoverflow.com/a/75467698
-        {
-          index: true,
-          element: <Navigate to='/poetry' replace />,
-        },
-        {
-          path: '/poetry',
-          element: <PoetryPage />,
-        },
+        // {
+        //   index: true,
+        //   element: <Navigate to='/poetry' replace />,
+        // },
+        // {
+        //   path: '/poetry',
+        //   element: <PoetryPage />,
+        // },
       ],
     },
   ],

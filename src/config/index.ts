@@ -1,1 +1,1 @@
-export const APP_NAME = 'poetry'
+export const APP_NAME = 'react-template'
