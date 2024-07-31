@@ -27,5 +27,7 @@ deploy: build
 	# 可在 shell 脚本中设置 `set -x`, 打印每一行脚本
 	# set -euxo pipefail
 	# #!/usr/bin/env bash
-	sudo rm -rf /usr/share/nginx/poetry/* && \
-	sudo cp -r dist/* /usr/share/nginx/poetry
+
+	# sudo rm -rf /usr/share/nginx/poetry/* && \
+	# sudo cp -r dist/* /usr/share/nginx/poetry && \
+	# sudo systemctl restart nginx
