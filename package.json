@@ -8,7 +8,8 @@
     "check": "tsc",
     "build": "tsc && vite build --mode=production",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "barrelsby": "barrelsby --delete"
   },
   "dependencies": {
     "@vercel/speed-insights": "^1.0.12",
@@ -50,6 +51,7 @@
     "@typescript-eslint/parser": "^7.18.0",
     "@vitejs/plugin-react-swc": "^3.7.0",
     "autoprefixer": "^10.4.19",
+    "barrelsby": "^2.8.1",
     "commitizen": "^4.3.0",
     "cssnano": "^7.0.4",
     "daisyui": "^4.12.10",
