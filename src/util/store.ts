@@ -50,7 +50,7 @@ export class StoreItem<T> {
     } catch (e) {
       this.options.onError(e)
     }
-    return defaultValue
+    return defaultValue ?? this.options.defaultValue
   }
 
   public set(value: T) {
