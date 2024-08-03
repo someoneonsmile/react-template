@@ -2,7 +2,7 @@ import hash from 'object-hash'
 import { Dispatch, useEffect, useState } from 'react'
 
 export function useCssLink(
-  initHref?: string
+  initHref?: string,
 ): [string | undefined, Dispatch<React.SetStateAction<string | undefined>>] {
   const [href, setHref] = useState(initHref)
   useEffect(() => {

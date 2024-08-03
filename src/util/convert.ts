@@ -1,6 +1,6 @@
 // https://stackoverflow.com/questions/50374869/generic-way-to-convert-all-instances-of-null-to-undefined-in-typescript
 export function nullsToUndefined<T>(
-  obj: T
+  obj: T,
 ): RecursivelyReplaceNullWithUndefined<T> {
   if (obj === null || obj === undefined) {
     return undefined as any

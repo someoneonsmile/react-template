@@ -15,8 +15,8 @@ function AlignText({ className, children, ...otherProps }: AlignTextProps) {
       {...otherProps}
       className={cn(
         `${className ?? ''} text-balance text-left [text-align-last:right]`.split(
-          's+'
-        )
+          's+',
+        ),
       )}
     >
       {children}

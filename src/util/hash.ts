@@ -3,7 +3,7 @@ import objectHashOuter from 'object-hash'
 
 export const objectHash = (obj: {} | null) => {
   return SHA256(objectHashOuter(obj, { algorithm: 'passthrough' })).toString(
-    enc.Hex
+    enc.Hex,
   )
 }
 

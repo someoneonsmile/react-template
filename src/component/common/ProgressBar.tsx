@@ -12,7 +12,7 @@ function ProgressBar({ progress: p }: ProgressBarProps) {
           'h-0',
           'border-t-2',
           'border-orange-700',
-          'transtion-[width]'
+          'transtion-[width]',
         )}
         style={{ width: `${p}%` }}
       />

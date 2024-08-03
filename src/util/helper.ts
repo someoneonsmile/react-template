@@ -14,7 +14,7 @@ export const errorHandler = <F extends (...args: any[]) => any>(f: F) => {
 }
 
 export const asyncErrorHandler = <F extends (...args: any[]) => Promise<any>>(
-  f: F
+  f: F,
 ) => {
   type returnType = Awaited<ReturnType<typeof f>> | void
   return async function (...args: Parameters<typeof f>): Promise<returnType> {
