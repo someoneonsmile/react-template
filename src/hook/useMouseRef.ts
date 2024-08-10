@@ -18,7 +18,7 @@ function useMouseRef(elementRef: RefObject<Element>) {
   //     console.error('useMouseRef expects a single ref argument.')
   //   }
   // }
-  const ref = useRef<State>()
+  const ref = useRef<State>(undefined)
 
   useEffect(() => {
     const moveHandler = (event: MouseEvent) => {
