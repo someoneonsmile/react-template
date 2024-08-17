@@ -1,5 +1,6 @@
 import { curry } from 'ramda'
 import { RefObject, useEffect } from 'react'
+
 import { half, keypress } from '../util'
 
 interface useKeyMapScrollOption {
@@ -8,7 +9,7 @@ interface useKeyMapScrollOption {
 
 function useKeyMapScroll(
   contentRef: RefObject<HTMLElement>,
-  { listenOnRoot = true }: useKeyMapScrollOption = {}
+  { listenOnRoot = true }: useKeyMapScrollOption = {},
 ) {
   useEffect(() => {
     const step = 50
@@ -63,7 +64,7 @@ function useKeyMapScroll(
 
     const keyDownHandler = (e: KeyboardEvent) => {
       const blockSet = new Set(['INPUT', 'TEXTAREA'])
-      if (blockSet.has((<any>e.target)?.tagName)) {
+      if (blockSet.has((e.target as HTMLElement)?.tagName)) {
         return
       }
       const key = curry(keypress)(e)
