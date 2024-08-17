@@ -15,8 +15,11 @@ default:
 dev:
 	pnpm run dev
 
+format:
+	pnpm run format
+
 check:
-	pnpm run check
+	pnpm run check && pnpm run format:check
 
 build:
 	pnpm run build

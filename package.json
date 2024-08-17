@@ -9,7 +9,9 @@
     "build": "tsc && vite build --mode=production --base=/dist",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "barrelsby": "barrelsby --delete"
+    "barrelsby": "barrelsby --delete",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx}'",
+    "format:check": "prettier --check '**/*.{js,jsx,ts,tsx}'"
   },
   "dependencies": {
     "@radix-ui/react-context-menu": "^2.2.1",
