@@ -21,6 +21,22 @@ export function useCssLink(
   return [href, setHref]
 }
 
+export function useEffectCssLink(href?: string) {
+  useEffect(() => {
+    if (href) {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = href
+      document.head.appendChild(link)
+      return () => {
+        if (link) {
+          document.head.removeChild(link)
+        }
+      }
+    }
+  }, [href])
+}
+
 interface useCssProp {
   initCss?: string
   clean?: boolean
@@ -36,17 +52,12 @@ export function useCss({
   const [css, setCss] = useState(initCss)
   useEffect(() => {
     if (css) {
-      const id = 'css-' + hash.MD5(css)
-      let style = document.getElementById(id)
-      if (!style) {
-        style = document.createElement('style')
-        style.id = id
-        style.innerHTML = css
-        document.head.appendChild(style)
-      }
+      const style = document.createElement('style')
+      style.innerHTML = css
+      document.head.appendChild(style)
       return () => {
         if (clean) {
-          style?.remove()
+          style.remove()
         }
       }
     }

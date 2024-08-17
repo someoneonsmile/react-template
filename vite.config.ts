@@ -1,4 +1,4 @@
-import million from 'million/compiler'
+import { resolve } from 'path'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { fileURLToPath } from 'url'
 import { defineConfig } from 'vite'
@@ -27,7 +27,6 @@ export default defineConfig({
     },
   },
   plugins: [
-    million.vite({ auto: true }),
     react({
       babel: {
         plugins: [['babel-plugin-react-compiler', ReactCompilerConfig]],
@@ -60,12 +59,20 @@ export default defineConfig({
         replacement: fileURLToPath(new URL('./src/component', import.meta.url)),
       },
       {
+        find: '@constants',
+        replacement: fileURLToPath(new URL('./src/constants', import.meta.url)),
+      },
+      {
         find: '@config',
         replacement: fileURLToPath(new URL('./src/config', import.meta.url)),
       },
       {
         find: '@css',
         replacement: fileURLToPath(new URL('./src/css', import.meta.url)),
+      },
+      {
+        find: '@theme',
+        replacement: fileURLToPath(new URL('./src/css/theme', import.meta.url)),
       },
       {
         find: '@data',
@@ -98,14 +105,6 @@ export default defineConfig({
       {
         find: '@route',
         replacement: fileURLToPath(new URL('./src/route', import.meta.url)),
-      },
-      {
-        find: '@theme',
-        replacement: fileURLToPath(new URL('./src/theme', import.meta.url)),
-      },
-      {
-        find: '@type',
-        replacement: fileURLToPath(new URL('./src/type', import.meta.url)),
       },
       {
         find: '@util',

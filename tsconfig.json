@@ -2,8 +2,9 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": ["ES2020", "DOM"],
     "module": "ESNext",
+    /* skip type checking all d.ts files */
     "skipLibCheck": true,
 
     /* Bundler mode */
@@ -29,17 +30,18 @@
       "@asserts/*": ["src/asserts/*"],
       "@component/*": ["src/component/*"],
       "@config/*": ["src/config/*"],
+      "@constant/*": ["src/constant/*"],
       "@css/*": ["src/css/*"],
+      "@theme/*": ["src/css/theme/*"],
       "@data/*": ["src/data/*"],
       "@event/*": ["src/event/*"],
       "@helper/*": ["src/helper/*"],
       "@hook/*": ["src/hook/*"],
       "@layout/*": ["src/layout/*"],
       "@page/*": ["src/page/*"],
+      "@context/*": ["src/context/*"],
       "@provider/*": ["src/provider/*"],
       "@route/*": ["src/route/*"],
-      "@theme/*": ["src/theme/*"],
-      "@type/*": ["src/type/*"],
       "@util/*": ["src/util/*"]
     }
   },

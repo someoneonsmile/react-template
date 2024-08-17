@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import { EmptyRecord } from '@component/common/Svg'
+import { EmptyRecord } from '@/component/common/Svg'
 
 interface EmptyProps {
   tips?: ReactNode
