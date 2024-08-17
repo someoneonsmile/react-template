@@ -36,7 +36,7 @@ function Tooltip({
               'p-1',
               'rounded-md',
               'backdrop-blur',
-              'text-sm'
+              'text-sm',
             )}
           >
             {tip}
