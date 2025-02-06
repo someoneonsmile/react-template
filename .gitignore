@@ -23,5 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
+pnpm-lock.yaml
 
 stats.html
