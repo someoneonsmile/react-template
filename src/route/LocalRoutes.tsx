@@ -1,4 +1,7 @@
-import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { Suspense } from 'react'
+import { Navigate, RouterProvider, createBrowserRouter } from 'react-router'
+
+// import AIPage from '@/page/AIPage'
 
 // import PoetryPage from '@page/PoetryPage'
 
@@ -9,14 +12,14 @@ const router = createBrowserRouter(
       // element: <Layout />,
       children: [
         // https://stackoverflow.com/a/75467698
-        // {
-        //   index: true,
-        //   element: <Navigate to='/poetry' replace />,
-        // },
-        // {
-        //   path: '/poetry',
-        //   element: <PoetryPage />,
-        // },
+        {
+          index: true,
+          element: <Navigate to='/index' replace />,
+        },
+        {
+          path: 'index',
+          element: <></>,
+        },
       ],
     },
   ],
@@ -27,7 +30,9 @@ const router = createBrowserRouter(
 
 function LocalRoutes() {
   return (
-    <RouterProvider router={router} fallbackElement={<span>Loading...</span>} />
+    <Suspense fallback={<span>Loading...</span>}>
+      <RouterProvider router={router} />
+    </Suspense>
   )
 }
 

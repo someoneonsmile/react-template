@@ -8,6 +8,12 @@ import { DEFAULT } from '@/constant'
 
 declare global {
   type StringDefault = typeof DEFAULT | Extract<string, 'DEFAULT'>
+
+  type AlignType = 'start' | 'end'
+
+  type DirectionType = 'left' | 'right' | 'bottom' | 'top'
+
+  type Id = string | number
 }
 
 export {}
