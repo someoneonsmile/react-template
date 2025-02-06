@@ -1,0 +1,239 @@
+@import 'tailwindcss';
+@plugin "daisyui";
+
+@theme {
+  --color-*: initial;
+  --color-current: currentColor;
+  --color-transparent: transparent;
+
+  /* --------------------------------------------------------------------- */
+  /*    - 背景 - */
+  /* --------------------------------------------------------------------- */
+
+  /* Ethereal | 空灵色，可能用于轻量级背景或强调透明度 */
+  --color-ethereal: rgb(var(--app-color-ethereal));
+  --color-ethereal-light: rgb(var(--app-color-ethereal-light));
+  --color-ethereal-less: rgb(var(--app-color-ethereal-less));
+  --color-ethereal-dark: rgb(var(--app-color-ethereal-dark));
+  --color-ethereal-more: rgb(var(--app-color-ethereal-more));
+
+  /* Subtle | 微妙色，用于不太显眼的元素或背景 */
+  --color-subtle: rgb(var(--app-color-subtle));
+  --color-subtle-light: rgb(var(--app-color-subtle-light));
+  --color-subtle-less: rgb(var(--app-color-subtle-less));
+  --color-subtle-dark: rgb(var(--app-color-subtle-dark));
+  --color-subtle-more: rgb(var(--app-color-subtle-more));
+
+  /* Mystique | 神秘色，可能用于创造深邃或未知的感觉 */
+  --color-mystique: rgb(var(--app-color-mystique));
+  --color-mystique-light: rgb(var(--app-color-mystique-light));
+  --color-mystique-less: rgb(var(--app-color-mystique-less));
+  --color-mystique-dark: rgb(var(--app-color-mystique-dark));
+  --color-mystique-more: rgb(var(--app-color-mystique-more));
+
+  /* --------------------------------------------------------------------- */
+  /*    - 前景 - */
+  /* --------------------------------------------------------------------- */
+
+  /* Elegant | 优雅色，用于传达精致和专业的感觉 */
+  --color-elegant: rgb(var(--app-color-elegant));
+  --color-elegant-light: rgb(var(--app-color-elegant-light));
+  --color-elegant-less: rgb(var(--app-color-elegant-less));
+  --color-elegant-dark: rgb(var(--app-color-elegant-dark));
+  --color-elegant-more: rgb(var(--app-color-elegant-more));
+
+  /* Fresh | 新鲜色，用于表达清新和现代感 */
+  --color-fresh: rgb(var(--app-color-fresh));
+  --color-fresh-light: rgb(var(--app-color-fresh-light));
+  --color-fresh-less: rgb(var(--app-color-fresh-less));
+  --color-fresh-dark: rgb(var(--app-color-fresh-dark));
+  --color-fresh-more: rgb(var(--app-color-fresh-more));
+
+  /* Vibrant | 鲜艳色，用于吸引注意力或表示活力 */
+  --color-vibrant: rgb(var(--app-color-vibrant));
+  --color-vibrant-light: rgb(var(--app-color-vibrant-light));
+  --color-vibrant-less: rgb(var(--app-color-vibrant-less));
+  --color-vibrant-dark: rgb(var(--app-color-vibrant-dark));
+  --color-vibrant-more: rgb(var(--app-color-vibrant-more));
+
+  /* Whimsical | 异想色，用于创造趣味性或不寻常的设计 */
+  --color-whimsical: rgb(var(--app-color-whimsical));
+  --color-whimsical-light: rgb(var(--app-color-whimsical-light));
+  --color-whimsical-less: rgb(var(--app-color-whimsical-less));
+  --color-whimsical-dark: rgb(var(--app-color-whimsical-dark));
+  --color-whimsical-more: rgb(var(--app-color-whimsical-more));
+
+  /* Action */
+  --color-action-success: rgb(var(--app-color-action-success, 40 167 69));
+  --color-action-info: rgb(var(--app-color-action-info, 0 123 255));
+  --color-action-warn: rgb(var(--app-color-action-warn, 255 193 7));
+  --color-action-error: rgb(var(--app-color-action-error, 220 53 69));
+
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+  --color-neutral-950: #0a0a0a;
+
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  --color-gray-950: #030712;
+
+  --color-white: #fff;
+  --color-black: #000;
+
+  --color-zinc-50: #fafafa;
+  --color-zinc-100: #f4f4f5;
+  --color-zinc-200: #e4e4e7;
+  --color-zinc-300: #d4d4d8;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-500: #71717a;
+  --color-zinc-600: #52525b;
+  --color-zinc-700: #3f3f46;
+  --color-zinc-800: #27272a;
+  --color-zinc-900: #18181b;
+  --color-zinc-950: #09090b;
+
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+
+  --color-sky-50: #f0f9ff;
+  --color-sky-100: #e0f2fe;
+  --color-sky-200: #bae6fd;
+  --color-sky-300: #7dd3fc;
+  --color-sky-400: #38bdf8;
+  --color-sky-500: #0ea5e9;
+  --color-sky-600: #0284c7;
+  --color-sky-700: #0369a1;
+  --color-sky-800: #075985;
+  --color-sky-900: #0c4a6e;
+  --color-sky-950: #082f49;
+
+  --color-teal-50: #f0fdfa;
+  --color-teal-100: #ccfbf1;
+  --color-teal-200: #99f6e4;
+  --color-teal-300: #5eead4;
+  --color-teal-400: #2dd4bf;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+  --color-teal-700: #0f766e;
+  --color-teal-800: #115e59;
+  --color-teal-900: #134e4a;
+  --color-teal-950: #042f2e;
+
+  --color-cyan-50: #ecfeff;
+  --color-cyan-100: #cffafe;
+  --color-cyan-200: #a5f3fc;
+  --color-cyan-300: #67e8f9;
+  --color-cyan-400: #22d3ee;
+  --color-cyan-500: #06b6d4;
+  --color-cyan-600: #0891b2;
+  --color-cyan-700: #0e7490;
+  --color-cyan-800: #155e75;
+  --color-cyan-900: #164e63;
+  --color-cyan-950: #083344;
+
+  --color-emerald-50: #ecfdf5;
+  --color-emerald-100: #d1fae5;
+  --color-emerald-200: #a7f3d0;
+  --color-emerald-300: #6ee7b7;
+  --color-emerald-400: #34d399;
+  --color-emerald-500: #10b981;
+  --color-emerald-600: #059669;
+  --color-emerald-700: #047857;
+  --color-emerald-800: #065f46;
+  --color-emerald-900: #064e3b;
+  --color-emerald-950: #022c22;
+
+  --color-indigo-50: #eef2ff;
+  --color-indigo-100: #e0e7ff;
+  --color-indigo-200: #c7d2fe;
+  --color-indigo-300: #a5b4fc;
+  --color-indigo-400: #818cf8;
+  --color-indigo-500: #6366f1;
+  --color-indigo-600: #4f46e5;
+  --color-indigo-700: #4338ca;
+  --color-indigo-800: #3730a3;
+  --color-indigo-900: #312e81;
+  --color-indigo-950: #1e1b4b;
+
+  --color-violet-50: #f5f3ff;
+  --color-violet-100: #ede9fe;
+  --color-violet-200: #ddd6fe;
+  --color-violet-300: #c4b5fd;
+  --color-violet-400: #a78bfa;
+  --color-violet-500: #8b5cf6;
+  --color-violet-600: #7c3aed;
+  --color-violet-700: #6d28d9;
+  --color-violet-800: #5b21b6;
+  --color-violet-900: #4c1d95;
+  --color-violet-950: #2e1065;
+
+  --color-pink-50: #fdf2f8;
+  --color-pink-100: #fce7f3;
+  --color-pink-200: #fbcfe8;
+  --color-pink-300: #f9a8d4;
+  --color-pink-400: #f472b6;
+  --color-pink-500: #ec4899;
+  --color-pink-600: #db2777;
+  --color-pink-700: #be185d;
+  --color-pink-800: #9d174d;
+  --color-pink-900: #831843;
+  --color-pink-950: #500724;
+
+  --color-rose-50: #fff1f2;
+  --color-rose-100: #ffe4e6;
+  --color-rose-200: #fecdd3;
+  --color-rose-300: #fda4af;
+  --color-rose-400: #fb7185;
+  --color-rose-500: #f43f5e;
+  --color-rose-600: #e11d48;
+  --color-rose-700: #be123c;
+  --color-rose-800: #9f1239;
+  --color-rose-900: #881337;
+  --color-rose-950: #4c0519;
+
+  --shadow-glow: 0 0 7px 0 rgb(0 0 0 / 0.1);
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+/* @layer base {
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--app-color-gray-200, currentColor);
+  }
+} */

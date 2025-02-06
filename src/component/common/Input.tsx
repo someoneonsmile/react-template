@@ -24,8 +24,8 @@ function Input({ icon, className, ...rest }: InputProps) {
       <input
         className={cn(
           'border-0',
-          'outline-none',
-          'focus:outline-none',
+          'outline-hidden',
+          'focus:outline-hidden',
           'w-full',
           'bg-transparent',
         )}
