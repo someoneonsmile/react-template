@@ -1,15 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: black;
-  background-color: #cccccc;
+  color: var(--color-elegant);
+  background-color: var(--color-ethereal);
+
+  --root-bg: var(--color-ethereal);
+  --color-base-content: var(--color-elegant);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,13 +17,12 @@
 }
 
 #root {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
   scrollbar-gutter: stable;
+}
+
+body {
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .scrollbar {

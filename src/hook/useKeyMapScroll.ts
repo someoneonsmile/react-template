@@ -22,7 +22,7 @@ function useKeyMapScroll(
 
     const scrollHalfUpHandler = (_: KeyboardEvent) => {
       contentRef.current?.scrollBy({
-        top: half(-contentRef.current?.offsetHeight ?? 0),
+        top: half(-(contentRef.current?.offsetHeight ?? 0)),
       })
     }
 

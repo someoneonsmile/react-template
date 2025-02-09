@@ -17,8 +17,7 @@ type DeepReadonly<T> = {
 }
 
 /**
- * Exempt: `'k'` for Option key
- *         `'k1' | 'k2'` for muti Option key
+ * Exempt: `'k'` for Option key, `'k1' | 'k2'` for muti Option key
  */
 type KeyNonNullable<T, Exempt extends keyof T = never> = {
   [K in keyof T as Exclude<K, Exempt>]-?: NonNullable<T[K]>

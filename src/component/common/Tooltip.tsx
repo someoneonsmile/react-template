@@ -35,7 +35,7 @@ function Tooltip({
               'dark:text-slate-900',
               'p-1',
               'rounded-md',
-              'backdrop-blur',
+              'backdrop-blur-sm',
               'text-sm',
             )}
           >
