@@ -1,10 +1,11 @@
 import { createContext } from 'react'
 
-import { ThemeType, getTheme } from '@/theme'
+import { ThemeFilterType, ThemeType, getTheme } from '@/theme'
 
 export type ThemeContextType = [
   ThemeType,
-  undefined | ((value: ThemeType) => void),
+  ThemeFilterType,
+  undefined | ((value: ThemeFilterType) => void),
 ]
 
-export default createContext<ThemeContextType>([getTheme(), undefined])
+export default createContext<ThemeContextType>([getTheme(), {}, undefined])
