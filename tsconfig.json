@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM"],
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
     "module": "ESNext",
     /* skip type checking all d.ts files */
     "skipLibCheck": true,
-
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -14,37 +16,77 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-
     /* Linting */
     "strict": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     // "typeRoots": ["./node_modules/@types"],
-
     /* alias */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@action/*": ["src/action/*"],
-      "@asserts/*": ["src/asserts/*"],
-      "@component/*": ["src/component/*"],
-      "@config/*": ["src/config/*"],
-      "@constant/*": ["src/constant/*"],
-      "@css/*": ["src/css/*"],
-      "@theme/*": ["src/css/theme/*"],
-      "@data/*": ["src/data/*"],
-      "@event/*": ["src/event/*"],
-      "@helper/*": ["src/helper/*"],
-      "@hook/*": ["src/hook/*"],
-      "@layout/*": ["src/layout/*"],
-      "@page/*": ["src/page/*"],
-      "@context/*": ["src/context/*"],
-      "@provider/*": ["src/provider/*"],
-      "@route/*": ["src/route/*"],
-      "@util/*": ["src/util/*"]
+      "@/*": [
+        "src/*"
+      ],
+      "@action/*": [
+        "src/action/*"
+      ],
+      "@asserts/*": [
+        "src/asserts/*"
+      ],
+      "@component/*": [
+        "src/component/*"
+      ],
+      "@config/*": [
+        "src/config/*"
+      ],
+      "@constant/*": [
+        "src/constant/*"
+      ],
+      "@css/*": [
+        "src/css/*"
+      ],
+      "@theme/*": [
+        "src/css/theme/*"
+      ],
+      "@data/*": [
+        "src/data/*"
+      ],
+      "@event/*": [
+        "src/event/*"
+      ],
+      "@helper/*": [
+        "src/helper/*"
+      ],
+      "@hook/*": [
+        "src/hook/*"
+      ],
+      "@layout/*": [
+        "src/layout/*"
+      ],
+      "@page/*": [
+        "src/page/*"
+      ],
+      "@context/*": [
+        "src/context/*"
+      ],
+      "@provider/*": [
+        "src/provider/*"
+      ],
+      "@route/*": [
+        "src/route/*"
+      ],
+      "@util/*": [
+        "src/util/*"
+      ]
     }
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }
