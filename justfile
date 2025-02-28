@@ -21,6 +21,9 @@ format:
 check:
 	pnpm run check && pnpm run format:check
 
+set-version version:
+	jaq '.version = "{{version}}"' package.json > package.json.temp && mv package.json.temp package.json
+
 build:
 	pnpm run build
 
