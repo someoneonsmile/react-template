@@ -1,20 +1,28 @@
-import { mergeDeepLeft } from 'ramda'
+export interface Serializer<F, T> {
+  encode: (value: F) => T
+  decode: (value: T) => F
+}
 
-interface StoreItemOptions<T> {
-  defaultValue?: T
-  serializer?: (value: T) => string
-  deserializer?: (value: string) => T
+export interface StoreItemOptions<T> {
+  defaultValue: T
+  serializer?: Serializer<T, string>
+  storage?: Storage
   onError?: (e: unknown) => void
 }
 
-function defaultOptions<T>() {
+function defaultOptions<T>(): Required<
+  Omit<StoreItemOptions<T>, 'defaultValue'>
+> {
   return {
-    serializer: (value: T) => {
-      return JSON.stringify(value)
+    serializer: {
+      encode: (value: T) => {
+        return JSON.stringify(value)
+      },
+      decode: (value: string) => {
+        return JSON.parse(value)
+      },
     },
-    deserializer: (value: string) => {
-      return JSON.parse(value)
-    },
+    storage: getStorage(),
     onError: (e: unknown) => {
       console.log(e)
     },
@@ -27,25 +35,24 @@ const getStorage = () => {
 
 export class StoreItem<T> {
   private key: string
-  private storage?: Storage
-  private options: KeyNonNullable<StoreItemOptions<any>, 'defaultValue'>
+  private options: Required<StoreItemOptions<T>>
 
-  constructor(key: string, options?: StoreItemOptions<T>) {
+  constructor(key: string, options: StoreItemOptions<T>) {
     this.key = key
-    this.options = mergeDeepLeft(options || {}, defaultOptions())
-
-    try {
-      this.storage = getStorage()
-    } catch (err) {
-      this.options.onError(err)
+    const d = defaultOptions<T>()
+    this.options = {
+      defaultValue: options.defaultValue,
+      serializer: options.serializer || d.serializer,
+      storage: options.storage || d.storage,
+      onError: options.onError || d.onError,
     }
   }
 
-  public get(defaultValue?: T): Option<T> {
+  public get(defaultValue?: T): T {
     try {
-      const v = this.storage?.getItem(this.key)
+      const v = this.options.storage?.getItem(this.key)
       if (v) {
-        return this.options.deserializer(v)
+        return this.options.serializer?.decode(v)
       }
     } catch (e) {
       this.options.onError(e)
@@ -53,9 +60,16 @@ export class StoreItem<T> {
     return defaultValue ?? this.options.defaultValue
   }
 
-  public set(value: T) {
+  public set(value: Option<T>) {
     try {
-      this.storage?.setItem(this.key, this.options.serializer(value))
+      if (value === undefined) {
+        this.options.storage.removeItem(this.key)
+        return
+      }
+      this.options.storage.setItem(
+        this.key,
+        this.options.serializer.encode(value),
+      )
     } catch (e) {
       this.options.onError(e)
     }
@@ -63,7 +77,7 @@ export class StoreItem<T> {
 
   public clear() {
     try {
-      this.storage?.removeItem(this.key)
+      this.options.storage.removeItem(this.key)
     } catch (e) {
       this.options.onError(e)
     }
