@@ -5,7 +5,7 @@ import { StoreItem, StoreItemOptions } from '@/util/store'
 export default function useStore<S>(
   key: string,
   options: StoreItemOptions<S>,
-): [S, Dispatch<SetStateAction<S>>] {
+): [Readonly<S>, Dispatch<SetStateAction<S>>] {
   const storeItem = useMemo(() => {
     return new StoreItem(key, options)
   }, [])
