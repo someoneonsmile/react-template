@@ -1,3 +1,5 @@
+import { marshal, unmarshal } from './marshaler'
+
 export interface Serializer<F, T> {
   encode: (value: F) => T
   decode: (value: T) => F
@@ -10,18 +12,22 @@ export interface StoreItemOptions<T> {
   onError?: (e: unknown) => void
 }
 
+function getSerializer<T>() {
+  return {
+    encode: (value: T) => {
+      return marshal(value)
+    },
+    decode: (value: string) => {
+      return unmarshal(value)
+    },
+  }
+}
+
 function defaultOptions<T>(): Required<
   Omit<StoreItemOptions<T>, 'defaultValue'>
 > {
   return {
-    serializer: {
-      encode: (value: T) => {
-        return JSON.stringify(value)
-      },
-      decode: (value: string) => {
-        return JSON.parse(value)
-      },
-    },
+    serializer: getSerializer(),
     storage: getStorage(),
     onError: (e: unknown) => {
       console.log(e)
