@@ -1,33 +1,17 @@
-import { marshal, unmarshal } from './marshaler'
-
-export interface Serializer<F, T> {
-  encode: (value: F) => T
-  decode: (value: T) => F
-}
+import { Marshaler, json } from './marshaler'
 
 export interface StoreItemOptions<T> {
   defaultValue: T
-  serializer?: Serializer<T, string>
+  marshaler?: Marshaler<T>
   storage?: Storage
   onError?: (e: unknown) => void
-}
-
-function getSerializer<T>() {
-  return {
-    encode: (value: T) => {
-      return marshal(value)
-    },
-    decode: (value: string) => {
-      return unmarshal(value)
-    },
-  }
 }
 
 function defaultOptions<T>(): Required<
   Omit<StoreItemOptions<T>, 'defaultValue'>
 > {
   return {
-    serializer: getSerializer(),
+    marshaler: json,
     storage: getStorage(),
     onError: (e: unknown) => {
       console.log(e)
@@ -48,7 +32,7 @@ export class StoreItem<T> {
     const d = defaultOptions<T>()
     this.options = {
       defaultValue: options.defaultValue,
-      serializer: options.serializer || d.serializer,
+      marshaler: options.marshaler || d.marshaler,
       storage: options.storage || d.storage,
       onError: options.onError || d.onError,
     }
@@ -58,7 +42,7 @@ export class StoreItem<T> {
     try {
       const v = this.options.storage?.getItem(this.key)
       if (v) {
-        return this.options.serializer?.decode(v)
+        return this.options.marshaler?.unmarshal(v)
       }
     } catch (e) {
       this.options.onError(e)
@@ -74,7 +58,7 @@ export class StoreItem<T> {
       }
       this.options.storage.setItem(
         this.key,
-        this.options.serializer.encode(value),
+        this.options.marshaler.marshal(value),
       )
     } catch (e) {
       this.options.onError(e)
