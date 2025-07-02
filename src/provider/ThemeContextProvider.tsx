@@ -24,22 +24,25 @@ function ThemeContextProvider({ children }: ThemeContextProviderProps) {
   const [lightDarkMode, setLightDarkMode] = useStore<LightDarkMode>(
     'light-dark-mode',
     {
-      defaultValue: null,
+      defaultValue: undefined,
     },
   )
 
   const isPreferDark = useMatchMedia('(prefers-color-scheme: dark)')
 
-  const isDark = lightDarkMode ?? isPreferDark
+  const lightDarkModeCalc: LightDarkMode =
+    lightDarkMode ?? (isPreferDark ? 'dark' : 'light')
 
   useEffectCssLink(themeCssUrl)
   useEffect(() => {
     const html = document.getElementsByTagName('html')[0]
-    html.dataset.theme = isDark ? 'dark' : ''
+    console.log(lightDarkModeCalc)
+
+    html.dataset.theme = lightDarkModeCalc
     return () => {
-      html.dataset.theme = ''
+      html.dataset.theme = undefined
     }
-  }, [isDark])
+  }, [lightDarkModeCalc])
 
   return (
     <>

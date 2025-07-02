@@ -20,7 +20,7 @@ export type ThemeContextType = [
   undefined | ((value: ThemeFilterType) => void),
 ]
 
-export type LightDarkMode = Maybe<'light' | 'dark'>
+export type LightDarkMode = 'light' | 'dark' | undefined
 
 export const themes: ThemeType[] = [
   {
