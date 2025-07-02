@@ -5,6 +5,8 @@
   exclude: rootcolor;
 }
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 @theme {
   --color-*: initial;
   --color-current: currentColor;

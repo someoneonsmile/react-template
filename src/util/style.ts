@@ -1,12 +1,27 @@
-import { ClassValue, clsx } from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import { ClassValue, clsx as _clsx } from 'clsx'
+import { extendTailwindMerge } from 'tailwind-merge'
+
+const _twMerge = extendTailwindMerge({
+  override: {
+    // theme: {
+    //   colors: [],
+    // },
+  },
+  extend: {
+    classGroups: {
+      shadow: [{ shadow: ['glow'] }],
+    },
+  },
+})
 
 /**
- * className
+ * className merge
  */
-export const cn = function (...inputs: ClassValue[]) {
-  return twMerge(clsx(...inputs))
+export const cm = function (...inputs: ClassValue[]) {
+  return _twMerge(_clsx(...inputs))
 }
+
+export const cn = _clsx
 
 /**
  * 查询是否偏好暗色

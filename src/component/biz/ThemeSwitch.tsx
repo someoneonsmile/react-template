@@ -1,7 +1,7 @@
 import { CiDesktop } from 'react-icons/ci'
 import { IoMoon, IoSunnyOutline } from 'react-icons/io5'
 
-import { ThemeFilterType, ThemeType } from '@/theme'
+import { LightDarkMode, ThemeFilterType, ThemeType } from '@/theme'
 import { cm } from '@/util/style'
 
 import FillContainer from '../common/FillContainer'
@@ -11,6 +11,8 @@ interface ThemeSwitchProps {
   themes: ThemeType[]
   themeFilter: ThemeFilterType
   setThemeFilter: (themeFilter: ThemeFilterType) => void
+  lightDarkMode: LightDarkMode
+  setLightDarkMode: (lightDarkMode: LightDarkMode) => void
   align?: AlignType
   direction?: DirectionType
   hover?: boolean
@@ -32,6 +34,8 @@ function ThemeSwitch({
   themes,
   themeFilter,
   setThemeFilter,
+  lightDarkMode,
+  setLightDarkMode,
   align = 'start',
   direction = 'bottom',
   hover = true,
@@ -82,13 +86,10 @@ function ThemeSwitch({
         </ul>
       </div>
       <div>
-        <Switch<ThemeFilterType['type']>
-          value={themeFilter.type}
+        <Switch<LightDarkMode>
+          value={lightDarkMode}
           onChange={function (v) {
-            setThemeFilter({
-              ...themeFilter,
-              type: v,
-            })
+            setLightDarkMode(v)
           }}
           items={[
             {

@@ -5,7 +5,7 @@ import ThemeContext from '@/context/ThemeContext'
 import { useEffectCssLink } from '@/hook'
 import useMatchMedia from '@/hook/useMatchMedia'
 import useStore from '@/hook/useStore'
-import { ThemeFilterType, getTheme, themes } from '@/theme'
+import { LightDarkMode, ThemeFilterType, getTheme, themes } from '@/theme'
 
 interface ThemeContextProviderProps {
   children?: ReactNode
@@ -18,26 +18,40 @@ function ThemeContextProvider({ children }: ThemeContextProviderProps) {
   const [themeFilter, setThemeFilter] = useStore<ThemeFilterType>('theme', {
     defaultValue: {},
   })
+  const theme = getTheme(themeFilter)
+  const themeCssUrl = theme?.url
+
+  const [lightDarkMode, setLightDarkMode] = useStore<LightDarkMode>(
+    'light-dark-mode',
+    {
+      defaultValue: null,
+    },
+  )
+
   const isPreferDark = useMatchMedia('(prefers-color-scheme: dark)')
-  const themeFilterWithPrefer = { ...themeFilter }
-  if (!themeFilterWithPrefer.type) {
-    themeFilterWithPrefer.type = isPreferDark ? 'dark' : 'light'
-  }
-  const theme = getTheme(themeFilterWithPrefer)
-  const themeCssUrl = theme.url
+
+  const isDark = lightDarkMode ?? isPreferDark
 
   useEffectCssLink(themeCssUrl)
   useEffect(() => {
     const html = document.getElementsByTagName('html')[0]
-    html.dataset.theme = themeFilter.type
+    html.dataset.theme = isDark ? 'dark' : ''
     return () => {
       html.dataset.theme = ''
     }
-  }, [themeFilter])
+  }, [isDark])
 
   return (
     <>
-      <ThemeContext value={[theme, themeFilter, setThemeFilter]}>
+      <ThemeContext
+        value={[
+          theme,
+          themeFilter,
+          setThemeFilter,
+          lightDarkMode,
+          setLightDarkMode,
+        ]}
+      >
         {children}
       </ThemeContext>
     </>
