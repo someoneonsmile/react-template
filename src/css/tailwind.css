@@ -243,3 +243,7 @@
     border-color: var(--app-color-gray-200, currentColor);
   }
 } */
+
+@utility place-center {
+  @apply flex place-content-center place-items-center;
+}
