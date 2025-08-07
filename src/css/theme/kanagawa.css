@@ -7,23 +7,21 @@
   /* ethereal 空灵色 */
   --app-color-ethereal: 224 232 249; /* #E0E8F9 */
   --app-color-ethereal-light: 240 245 255; /* #F0F5FF */
-  --app-color-ethereal-less: 240 245 255; /* #F0F5FF */
   --app-color-ethereal-dark: 179 193 226; /* #B3C1E2 */
-  --app-color-ethereal-more: 179 193 226; /* #B3C1E2 */
 
   /* subtle 微妙色 */
   --app-color-subtle: 211 211 211; /* #D3D3D3 */
   --app-color-subtle-light: 240 240 240; /* #F0F0F0 */
-  --app-color-subtle-less: 240 240 240; /* #F0F0F0 */
   --app-color-subtle-dark: 176 176 176; /* #B0B0B0 */
-  --app-color-subtle-more: 176 176 176; /* #B0B0B0 */
 
   /* mystique 神秘色 */
   --app-color-mystique: 75 0 130; /* #4B0082 */
   --app-color-mystique-light: 123 77 154; /* #7B4D9A */
-  --app-color-mystique-less: 123 77 154; /* #7B4D9A */
   --app-color-mystique-dark: 46 0 94; /* #2E005E */
-  --app-color-mystique-more: 46 0 94; /* #2E005E */
+  /* on-mystique | mystique 背景上的前景色（文字/icon） */
+  --app-color-on-mystique: 245 247 250; /* #F5F7FA */
+  --app-color-on-mystique-light: 255 255 255; /* #FFFFFF */
+  --app-color-on-mystique-dark: 200 205 215; /* #C8CDD7 */
 
   /* ---------------------------------------------------------------------- */
   /*    - 前景 -                                                            */
@@ -31,30 +29,22 @@
   /* elegant 优雅色 */
   --app-color-elegant: 112 128 144; /* #708090 */
   --app-color-elegant-light: 169 178 195; /* #A9B2C3 */
-  --app-color-elegant-less: 169 178 195; /* #A9B2C3 */
   --app-color-elegant-dark: 90 110 121; /* #5A6E79 */
-  --app-color-elegant-more: 90 110 121; /* #5A6E79 */
 
   /* vibrant 鲜艳色 */
   --app-color-vibrant: 255 99 71; /* #FF6347 */
   --app-color-vibrant-light: 255 140 127; /* #FF8C7F */
-  --app-color-vibrant-less: 255 140 127; /* #FF8C7F */
   --app-color-vibrant-dark: 204 59 51; /* #CC3B33 */
-  --app-color-vibrant-more: 204 59 51; /* #CC3B33 */
 
   /* fresh 新鲜色 */
   --app-color-fresh: 144 238 144; /* #90EE90 */
   --app-color-fresh-light: 193 242 193; /* #C1F2C1 */
-  --app-color-fresh-less: 193 242 193; /* #C1F2C1 */
   --app-color-fresh-dark: 108 165 108; /* #6CA56C */
-  --app-color-fresh-more: 108 165 108; /* #6CA56C */
 
   /* whimsical 异想色 */
   --app-color-whimsical: 186 85 211; /* #BA55D3 */
   --app-color-whimsical-light: 214 165 220; /* #D6A5DC */
-  --app-color-whimsical-less: 214 165 220; /* #D6A5DC */
   --app-color-whimsical-dark: 142 63 151; /* #8E3F97 */
-  --app-color-whimsical-more: 142 63 151; /* #8E3F97 */
 }
 
 [data-theme="dark"] {
@@ -67,23 +57,21 @@
   /* ethereal 空灵色 */
   --app-color-ethereal: 179 193 226; /* #B3C1E2 */
   --app-color-ethereal-light: 224 232 249; /* #E0E8F9 */
-  --app-color-ethereal-more: 224 232 249; /* #E0E8F9 */
   --app-color-ethereal-dark: 75 0 130; /* #4B0082 */
-  --app-color-ethereal-less: 75 0 130; /* #4B0082 */
 
   /* subtle 微妙色 */
   --app-color-subtle: 176 176 176; /* #B0B0B0 */
   --app-color-subtle-light: 211 211 211; /* #D3D3D3 */
-  --app-color-subtle-more: 211 211 211; /* #D3D3D3 */
   --app-color-subtle-dark: 112 128 144; /* #708090 */
-  --app-color-subtle-less: 112 128 144; /* #708090 */
 
   /* mystique 神秘色 */
   --app-color-mystique: 46 0 94; /* #2E005E */
   --app-color-mystique-light: 123 77 154; /* #7B4D9A */
-  --app-color-mystique-more: 123 77 154; /* #7B4D9A */
   --app-color-mystique-dark: 33 0 66; /* #210042 */
-  --app-color-mystique-less: 33 0 66; /* #210042 */
+  /* on-mystique | mystique 背景上的前景色（文字/icon） */
+  --app-color-on-mystique: 220 224 230; /* #DCE0E6 */
+  --app-color-on-mystique-light: 245 247 250; /* #F5F7FA */
+  --app-color-on-mystique-dark: 160 170 180; /* #A0AAB4 */
 
   /* ---------------------------------------------------------------------- */
   /*    - 前景 -                                                            */
@@ -91,28 +79,20 @@
   /* elegant 优雅色 */
   --app-color-elegant: 240 245 255; /* #F0F5FF */
   --app-color-elegant-light: 255 255 255; /* #FFFFFF */
-  --app-color-elegant-more: 255 255 255; /* #FFFFFF */
   --app-color-elegant-dark: 224 232 249; /* #E0E8F9 */
-  --app-color-elegant-less: 224 232 249; /* #E0E8F9 */
 
   /* vibrant 鲜艳色 */
   --app-color-vibrant: 255 99 71; /* #FF6347 */
   --app-color-vibrant-light: 255 140 127; /* #FF8C7F */
-  --app-color-vibrant-more: 255 140 127; /* #FF8C7F */
   --app-color-vibrant-dark: 204 59 51; /* #CC3B33 */
-  --app-color-vibrant-less: 204 59 51; /* #CC3B33 */
 
   /* fresh 新鲜色 */
   --app-color-fresh: 108 165 108; /* #6CA56C */
   --app-color-fresh-light: 144 238 144; /* #90EE90 */
-  --app-color-fresh-more: 144 238 144; /* #90EE90 */
   --app-color-fresh-dark: 90 110 121; /* #5A6E79 */
-  --app-color-fresh-less: 90 110 121; /* #5A6E79 */
 
   /* whimsical 异想色 */
   --app-color-whimsical: 142 63 151; /* #8E3F97 */
   --app-color-whimsical-light: 186 85 211; /* #BA55D3 */
-  --app-color-whimsical-more: 186 85 211; /* #BA55D3 */
   --app-color-whimsical-dark: 112 128 144; /* #708090 */
-  --app-color-whimsical-less: 112 128 144; /* #708090 */
 }

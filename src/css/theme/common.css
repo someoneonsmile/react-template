@@ -1,0 +1,52 @@
+:root {
+
+  --app-color-ethereal-less: var(--app-color-ethereal-light);
+  --app-color-ethereal-more: var(--app-color-ethereal-dark);
+
+  --app-color-subtle-less: var(--app-color-subtle-light);
+  --app-color-subtle-more: var(--app-color-subtle-dark);
+
+  --app-color-mystique-less: var(--app-color-mystique-light);
+  --app-color-mystique-more: var(--app-color-mystique-dark);
+
+  --app-color-on-mystique-less: var(--app-color-on-mystique-light);
+  --app-color-on-mystique-more: var(--app-color-on-mystique-dark);
+
+  --app-color-elegant-less: var(--app-color-elegant-light);
+  --app-color-elegant-more: var(--app-color-elegant-dark);
+
+  --app-color-vibrant-less: var(--app-color-vibrant-light);
+  --app-color-vibrant-more: var(--app-color-vibrant-dark);
+
+  --app-color-fresh-less: var(--app-color-fresh-light);
+  --app-color-fresh-more: var(--app-color-fresh-dark);
+
+  --app-color-whimsical-less: var(--app-color-whimsical-light);
+  --app-color-whimsical-more: var(--app-color-whimsical-dark);
+}
+
+[data-theme="dark"] {
+  --app-color-ethereal-more: var(--app-color-ethereal-light);
+  --app-color-ethereal-less: var(--app-color-ethereal-dark);
+
+  --app-color-subtle-more: var(--app-color-subtle-light);
+  --app-color-subtle-less: var(--app-color-subtle-dark);
+
+  --app-color-mystique-more: var(--app-color-mystique-light);
+  --app-color-mystique-less: var(--app-color-mystique-dark);
+
+  --app-color-on-mystique-more: var(--app-color-on-mystique-light);
+  --app-color-on-mystique-less: var(--app-color-on-mystique-dark);
+
+  --app-color-elegant-more: var(--app-color-elegant-light);
+  --app-color-elegant-less: var(--app-color-elegant-dark);
+
+  --app-color-vibrant-more: var(--app-color-vibrant-light);
+  --app-color-vibrant-less: var(--app-color-vibrant-dark);
+
+  --app-color-fresh-more: var(--app-color-fresh-light);
+  --app-color-fresh-less: var(--app-color-fresh-dark);
+
+  --app-color-whimsical-more: var(--app-color-whimsical-light);
+  --app-color-whimsical-less: var(--app-color-whimsical-dark);
+}

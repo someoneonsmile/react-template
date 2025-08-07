@@ -7,6 +7,8 @@
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
+@import "./theme/common.css" layer(theme);
+
 @theme {
   --color-*: initial;
   --color-current: currentColor;
@@ -36,6 +38,12 @@
   --color-mystique-less: rgb(var(--app-color-mystique-less));
   --color-mystique-dark: rgb(var(--app-color-mystique-dark));
   --color-mystique-more: rgb(var(--app-color-mystique-more));
+  --color-on-mystique: rgb(var(--app-color-on-mystique));
+  /* on-mystique | mystique 背景上的前景色（文字/icon） */
+  --color-on-mystique-light: rgb(var(--app-color-on-mystique-light));
+  --color-on-mystique-more: rgb(var(--app-color-on-mystique-more));
+  --color-on-mystique-dark: rgb(var(--app-color-on-mystique-dark));
+  --color-on-mystique-less: rgb(var(--app-color-on-mystique-less));
 
   /* --------------------------------------------------------------------- */
   /*    - 前景 - */

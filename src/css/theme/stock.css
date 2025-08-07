@@ -4,26 +4,24 @@
   /*    - 背景 -                                                            */
   /* ---------------------------------------------------------------------- */
 
-  /* ethereal 空灵色 | 主背景 */
-  --app-color-ethereal: 235 245 255; /* #EBF5FF */
-  --app-color-ethereal-light: 255 255 255; /* #FFFFFF */
-  --app-color-ethereal-less: 240 250 255; /* #F0FAFF */
-  --app-color-ethereal-dark: 210 230 250; /* #D2E6FA */
-  --app-color-ethereal-more: 200 220 245; /* #C8DCF5 */
+  /* ethereal 空灵色 | 主背景（米灰色系）- 更偏灰 */
+  --app-color-ethereal: 245 245 240; /* #F5F5F0 */
+  --app-color-ethereal-light: 250 250 245; /* #FAFAF5 */
+  --app-color-ethereal-dark: 230 230 225; /* #E6E6E1 */
 
-  /* subtle 微妙色 | 卡片/浮层/分割线等次级背景 */
-  --app-color-subtle: 245 247 250; /* #F5F7FA */
-  --app-color-subtle-light: 255 255 255; /* #FFFFFF */
-  --app-color-subtle-less: 250 252 254; /* #FAFCFE */
-  --app-color-subtle-dark: 220 224 230; /* #DCE0E6 */
-  --app-color-subtle-more: 200 205 215; /* #C8CDD7 */
+  /* subtle 微妙色 | 卡片/浮层/分割线等次级背景（米灰色系）- 更偏灰 */
+  --app-color-subtle: 240 240 235; /* #F0F0EB */
+  --app-color-subtle-light: 248 248 245; /* #F8F8F5 */
+  --app-color-subtle-dark: 225 225 220; /* #E1E1DC */
 
   /* mystique 神秘色 | 侧边栏/导航/强调区块 */
   --app-color-mystique: 36 48 72; /* #243048 */
   --app-color-mystique-light: 48 62 92; /* #303E5C */
-  --app-color-mystique-less: 60 74 110; /* #3C4A6E */
   --app-color-mystique-dark: 24 32 48; /* #182030 */
-  --app-color-mystique-more: 18 24 36; /* #121824 */
+  /* on-mystique | mystique 背景上的前景色（文字/icon） */
+  --app-color-on-mystique: 245 247 250; /* #F5F7FA */
+  --app-color-on-mystique-light: 255 255 255; /* #FFFFFF */
+  --app-color-on-mystique-dark: 200 205 215; /* #C8CDD7 */
 
   /* ---------------------------------------------------------------------- */
   /*    - 前景 -                                                            */
@@ -31,30 +29,22 @@
   /* elegant 优雅色 | 标题/主文本 */
   --app-color-elegant: 34 40 49; /* #222831 */
   --app-color-elegant-light: 60 70 80; /* #3C4650 */
-  --app-color-elegant-less: 80 90 100; /* #505A64 */
   --app-color-elegant-dark: 20 24 29; /* #14181D */
-  --app-color-elegant-more: 12 16 19; /* #0C1013 */
 
   /* vibrant 鲜艳色 | 涨色（红） */
   --app-color-vibrant: 233 70 70; /* #E94646 */
   --app-color-vibrant-light: 255 120 120; /* #FF7878 */
-  --app-color-vibrant-less: 255 180 180; /* #FFB4B4 */
   --app-color-vibrant-dark: 180 40 40; /* #B42828 */
-  --app-color-vibrant-more: 120 20 20; /* #781414 */
 
   /* fresh 新鲜色 | 跌色（绿） */
   --app-color-fresh: 0 180 90; /* #00B45A */
   --app-color-fresh-light: 80 220 140; /* #50DC8C */
-  --app-color-fresh-less: 160 240 200; /* #A0F0C8 */
   --app-color-fresh-dark: 0 120 60; /* #00783C */
-  --app-color-fresh-more: 0 80 40; /* #005028 */
 
   /* whimsical 异想色 | 高亮/提示 */
   --app-color-whimsical: 255 180 0; /* #FFB400 */
   --app-color-whimsical-light: 255 220 100; /* #FFDC64 */
-  --app-color-whimsical-less: 255 240 180; /* #FFF0B4 */
   --app-color-whimsical-dark: 200 140 0; /* #C88C00 */
-  --app-color-whimsical-more: 140 100 0; /* #8C6400 */
 }
 
 [data-theme="dark"] {
@@ -67,23 +57,21 @@
   /* ethereal 空灵色 | 主背景 */
   --app-color-ethereal: 36 48 72; /* #243048 */
   --app-color-ethereal-light: 60 74 110; /* #3C4A6E */
-  --app-color-ethereal-more: 80 100 140; /* #50648C */
   --app-color-ethereal-dark: 24 32 48; /* #182030 */
-  --app-color-ethereal-less: 18 24 36; /* #121824 */
 
   /* subtle 微妙色 | 卡片/浮层/分割线等次级背景 */
   --app-color-subtle: 28 32 40; /* #1C2028 */
   --app-color-subtle-light: 36 40 49; /* #222831 */
-  --app-color-subtle-more: 44 48 59; /* #2C303B */
   --app-color-subtle-dark: 18 20 24; /* #121418 */
-  --app-color-subtle-less: 12 14 19; /* #0C0E13 */
 
   /* mystique 神秘色 | 侧边栏/导航/强调区块 */
   --app-color-mystique: 18 24 36; /* #121824 */
   --app-color-mystique-light: 36 48 72; /* #243048 */
-  --app-color-mystique-more: 44 60 90; /* #2C3C5A */
   --app-color-mystique-dark: 12 16 24; /* #0C1018 */
-  --app-color-mystique-less: 8 12 18; /* #080C12 */
+  /* on-mystique | mystique 背景上的前景色（文字/icon） */
+  --app-color-on-mystique: 220 224 230; /* #DCE0E6 */
+  --app-color-on-mystique-light: 245 247 250; /* #F5F7FA */
+  --app-color-on-mystique-dark: 160 170 180; /* #A0AAB4 */
 
   /* ---------------------------------------------------------------------- */
   /*    - 前景 -                                                            */
@@ -91,28 +79,20 @@
   /* elegant 优雅色 | 标题/主文本 */
   --app-color-elegant: 220 224 230; /* #DCE0E6 */
   --app-color-elegant-light: 245 247 250; /* #F5F7FA */
-  --app-color-elegant-more: 255 255 255; /* #FFFFFF */
   --app-color-elegant-dark: 160 170 180; /* #A0AAB4 */
-  --app-color-elegant-less: 120 130 140; /* #78828C */
 
   /* vibrant 鲜艳色 | 涨色（红） */
-  --app-color-vibrant: 255 120 120; /* #FF7878 */
-  --app-color-vibrant-light: 233 70 70; /* #E94646 */
-  --app-color-vibrant-more: 180 40 40; /* #B42828 */
+  --app-color-vibrant: 233 70 70; /* #E94646 */
+  --app-color-vibrant-light: 255 120 120; /* #FF7878 */
   --app-color-vibrant-dark: 120 20 20; /* #781414 */
-  --app-color-vibrant-less: 255 180 180; /* #FFB4B4 */
 
   /* fresh 新鲜色 | 跌色（绿） */
   --app-color-fresh: 80 220 140; /* #50DC8C */
   --app-color-fresh-light: 0 180 90; /* #00B45A */
-  --app-color-fresh-more: 0 120 60; /* #00783C */
   --app-color-fresh-dark: 0 80 40; /* #005028 */
-  --app-color-fresh-less: 160 240 200; /* #A0F0C8 */
 
   /* whimsical 异想色 | 高亮/提示 */
-  --app-color-whimsical: 255 220 100; /* #FFDC64 */
-  --app-color-whimsical-light: 255 180 0; /* #FFB400 */
-  --app-color-whimsical-more: 200 140 0; /* #C88C00 */
+  --app-color-whimsical: 255 180 0; /* #FFB400 */
+  --app-color-whimsical-light: 255 220 100; /* #FFDC64 */
   --app-color-whimsical-dark: 140 100 0; /* #8C6400 */
-  --app-color-whimsical-less: 255 240 180; /* #FFF0B4 */
 }
