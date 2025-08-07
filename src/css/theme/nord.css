@@ -4,19 +4,19 @@
   /*    - 背景 -                                                            */
   /* ---------------------------------------------------------------------- */
 
-  /* subtle 微妙色 |> 暴风雪 */
-  --app-color-subtle: 216 222 233; /* #D8DEE9 */
-  --app-color-subtle-light: 235 238 244; /* #EBEEF4 */
-  --app-color-subtle-less: 235 238 244; /* #EBEEF4 */
-  --app-color-subtle-dark: 196 204 221; /* #C4CCDD */
-  --app-color-subtle-more: 196 204 221; /* #C4CCDD */
-
   /* ethereal 空灵色 |> 暴风雪 */
   --app-color-ethereal: 248 248 242; /* #F8F8F2 */
   --app-color-ethereal-light: 255 255 255; /* #FFFFFF */
   --app-color-ethereal-less: 255 255 255; /* #FFFFFF */
   --app-color-ethereal-dark: 236 238 236; /* #ECEEE4 */
   --app-color-ethereal-more: 236 238 236; /* #ECEEE4 */
+
+  /* subtle 微妙色 |> 暴风雪 */
+  --app-color-subtle: 216 222 233; /* #D8DEE9 */
+  --app-color-subtle-light: 235 238 244; /* #EBEEF4 */
+  --app-color-subtle-less: 235 238 244; /* #EBEEF4 */
+  --app-color-subtle-dark: 196 204 221; /* #C4CCDD */
+  --app-color-subtle-more: 196 204 221; /* #C4CCDD */
 
   /* mystique 神秘色 |> 极夜 */
   --app-color-mystique: 46 52 64; /* #2E3440 */
@@ -64,19 +64,19 @@
   /*    - 背景 -                                                            */
   /* ---------------------------------------------------------------------- */
 
-  /* subtle 微妙色 |> 极夜 */
-  --app-color-subtle: 76 86 106; /* #4C566A */
-  --app-color-subtle-light: 84 96 117; /* #546075 */
-  --app-color-subtle-more: 84 96 117; /* #546075 */
-  --app-color-subtle-dark: 59 66 81; /* #3B4251 */
-  --app-color-subtle-less: 59 66 81; /* #3B4251 */
-
   /* ethereal 空灵色 |> 极夜 */
   --app-color-ethereal: 59 66 82; /* #3B4252 */
   --app-color-ethereal-light: 67 76 94; /* #434C5E */
   --app-color-ethereal-more: 67 76 94; /* #434C5E */
   --app-color-ethereal-dark: 46 52 64; /* #2E3440 */
   --app-color-ethereal-less: 46 52 64; /* #2E3440 */
+
+  /* subtle 微妙色 |> 极夜 */
+  --app-color-subtle: 76 86 106; /* #4C566A */
+  --app-color-subtle-light: 84 96 117; /* #546075 */
+  --app-color-subtle-more: 84 96 117; /* #546075 */
+  --app-color-subtle-dark: 59 66 81; /* #3B4251 */
+  --app-color-subtle-less: 59 66 81; /* #3B4251 */
 
   /* mystique 神秘色 |> 暗色 */
   --app-color-mystique: 30 32 44; /* #1E202C */
