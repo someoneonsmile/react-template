@@ -1,6 +1,6 @@
 import { InputHTMLAttributes, ReactNode } from 'react'
 
-import { cn } from '@/util/style'
+import { cm } from '@/util/style'
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   icon?: ReactNode
@@ -9,25 +9,36 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 function Input({ icon, className, ...rest }: InputProps) {
   return (
     <div
-      className={cn(
+      className={cm(
         'flex',
-        'gap-3',
+        'items-center',
         'rounded-md',
-        'p-3',
         'border',
-        'border-sky-900',
-        'focus-within:border-sky-500',
-        className?.split(/\s+/),
+        'border-subtle-more',
+        'bg-subtle-more',
+        'has-focus:bg-transparent',
+        className,
       )}
     >
-      {icon && <div className={cn('aspect-square', 'h-3/4')}>{icon}</div>}
+      {icon && (
+        <div
+          className={cm(
+            'h-full',
+            'aspect-square',
+            'flex-none',
+            'place-center',
+            'select-none',
+          )}
+        >
+          <div className={cm('h-3/5', 'aspect-square')}>{icon}</div>
+        </div>
+      )}
       <input
-        className={cn(
+        className={cm(
           'border-0',
           'outline-hidden',
           'focus:outline-hidden',
           'w-full',
-          'bg-transparent',
         )}
         {...rest}
       />
