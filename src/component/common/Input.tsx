@@ -1,8 +1,8 @@
-import { InputHTMLAttributes, ReactNode } from 'react'
+import { ComponentProps, ReactNode } from 'react'
 
 import { cm } from '@/util/style'
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface InputProps extends ComponentProps<'input'> {
   icon?: ReactNode
 }
 
