@@ -1,0 +1,87 @@
+@import "./common.css" layer(theme);
+
+@theme {
+
+  /* 禁用所有默认颜色 */
+  /* --color-*: initial; */
+
+  /* 禁用 lime, fuchsia 默认颜色 */
+  /* --color-lime-*: initial;   */
+  /* --color-fuchsia-*: initial; */
+
+  --color-current: currentColor;
+  --color-transparent: transparent;
+
+  /* --------------------------------------------------------------------- */
+  /*    - 背景 - */
+  /* --------------------------------------------------------------------- */
+
+  /* Ethereal | 空灵色，可能用于轻量级背景或强调透明度 */
+  --color-ethereal: rgb(var(--app-color-ethereal));
+  --color-ethereal-light: rgb(var(--app-color-ethereal-light));
+  --color-ethereal-less: rgb(var(--app-color-ethereal-less));
+  --color-ethereal-dark: rgb(var(--app-color-ethereal-dark));
+  --color-ethereal-more: rgb(var(--app-color-ethereal-more));
+
+  /* Subtle | 微妙色，用于不太显眼的元素或背景 */
+  --color-subtle: rgb(var(--app-color-subtle));
+  --color-subtle-light: rgb(var(--app-color-subtle-light));
+  --color-subtle-less: rgb(var(--app-color-subtle-less));
+  --color-subtle-dark: rgb(var(--app-color-subtle-dark));
+  --color-subtle-more: rgb(var(--app-color-subtle-more));
+
+  /* Mystique | 神秘色，可能用于创造深邃或未知的感觉 */
+  --color-mystique: rgb(var(--app-color-mystique));
+  --color-mystique-light: rgb(var(--app-color-mystique-light));
+  --color-mystique-less: rgb(var(--app-color-mystique-less));
+  --color-mystique-dark: rgb(var(--app-color-mystique-dark));
+  --color-mystique-more: rgb(var(--app-color-mystique-more));
+  --color-on-mystique: rgb(var(--app-color-on-mystique));
+  /* on-mystique | mystique 背景上的前景色（文字/icon） */
+  --color-on-mystique-light: rgb(var(--app-color-on-mystique-light));
+  --color-on-mystique-more: rgb(var(--app-color-on-mystique-more));
+  --color-on-mystique-dark: rgb(var(--app-color-on-mystique-dark));
+  --color-on-mystique-less: rgb(var(--app-color-on-mystique-less));
+
+  /* --------------------------------------------------------------------- */
+  /*    - 前景 - */
+  /* --------------------------------------------------------------------- */
+
+  /* Elegant | 优雅色，用于传达精致和专业的感觉 */
+  --color-elegant: rgb(var(--app-color-elegant));
+  --color-elegant-light: rgb(var(--app-color-elegant-light));
+  --color-elegant-less: rgb(var(--app-color-elegant-less));
+  --color-elegant-dark: rgb(var(--app-color-elegant-dark));
+  --color-elegant-more: rgb(var(--app-color-elegant-more));
+
+  /* Fresh | 新鲜色，用于表达清新和现代感 */
+  --color-fresh: rgb(var(--app-color-fresh));
+  --color-fresh-light: rgb(var(--app-color-fresh-light));
+  --color-fresh-less: rgb(var(--app-color-fresh-less));
+  --color-fresh-dark: rgb(var(--app-color-fresh-dark));
+  --color-fresh-more: rgb(var(--app-color-fresh-more));
+
+  /* Vibrant | 鲜艳色，用于吸引注意力或表示活力 */
+  --color-vibrant: rgb(var(--app-color-vibrant));
+  --color-vibrant-light: rgb(var(--app-color-vibrant-light));
+  --color-vibrant-less: rgb(var(--app-color-vibrant-less));
+  --color-vibrant-dark: rgb(var(--app-color-vibrant-dark));
+  --color-vibrant-more: rgb(var(--app-color-vibrant-more));
+
+  /* Whimsical | 异想色，用于创造趣味性或不寻常的设计 */
+  --color-whimsical: rgb(var(--app-color-whimsical));
+  --color-whimsical-light: rgb(var(--app-color-whimsical-light));
+  --color-whimsical-less: rgb(var(--app-color-whimsical-less));
+  --color-whimsical-dark: rgb(var(--app-color-whimsical-dark));
+  --color-whimsical-more: rgb(var(--app-color-whimsical-more));
+
+  /* Action */
+  --color-action-success: rgb(var(--app-color-action-success, 40 167 69));
+  --color-action-info: rgb(var(--app-color-action-info, 0 123 255));
+  --color-action-warn: rgb(var(--app-color-action-warn, 255 193 7));
+  --color-action-error: rgb(var(--app-color-action-error, 220 53 69));
+  --color-action-disable: rgb(var(--app-color-action-disable, 160 160 160));
+
+
+  --shadow-glow: 0 0 7px 0 rgb(0 0 0 / 0.1);
+}
