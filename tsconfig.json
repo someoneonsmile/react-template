@@ -23,61 +23,60 @@
     "noFallthroughCasesInSwitch": true,
     // "typeRoots": ["./node_modules/@types"],
     /* alias */
-    "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*"
+        "./src/*"
       ],
       "@action/*": [
-        "src/action/*"
+        "./src/action/*"
       ],
-      "@asserts/*": [
-        "src/asserts/*"
+      "@assets/*": [
+        "./src/assets/*"
       ],
       "@component/*": [
-        "src/component/*"
+        "./src/component/*"
       ],
       "@config/*": [
-        "src/config/*"
+        "./src/config/*"
       ],
       "@constant/*": [
-        "src/constant/*"
+        "./src/constant/*"
       ],
       "@css/*": [
-        "src/css/*"
+        "./src/css/*"
       ],
       "@theme/*": [
-        "src/css/theme/*"
+        "./src/css/theme/*"
       ],
       "@data/*": [
-        "src/data/*"
+        "./src/data/*"
       ],
       "@event/*": [
-        "src/event/*"
+        "./src/event/*"
       ],
       "@helper/*": [
-        "src/helper/*"
+        "./src/helper/*"
       ],
       "@hook/*": [
-        "src/hook/*"
+        "./src/hook/*"
       ],
       "@layout/*": [
-        "src/layout/*"
+        "./src/layout/*"
       ],
       "@page/*": [
-        "src/page/*"
+        "./src/page/*"
       ],
       "@context/*": [
-        "src/context/*"
+        "./src/context/*"
       ],
       "@provider/*": [
-        "src/provider/*"
+        "./src/provider/*"
       ],
       "@route/*": [
-        "src/route/*"
+        "./src/route/*"
       ],
       "@util/*": [
-        "src/util/*"
+        "./src/util/*"
       ]
     }
   },
