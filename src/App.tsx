@@ -1,7 +1,7 @@
 import '@/css/App.css'
-import LocalRoutes from '@/route/LocalRoutes'
-
 import { SpeedInsights } from '@vercel/speed-insights/react'
+
+import LocalRoutes from '@/route/LocalRoutes'
 
 import ThemeContextProvider from './provider/ThemeContextProvider'
 

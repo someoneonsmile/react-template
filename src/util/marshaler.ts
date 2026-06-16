@@ -20,12 +20,7 @@ function replacer(this: any, key: string, value: any) {
 
 // 自定义反序列化函数
 function reviver(_key: string, value: any) {
-  if (
-    value &&
-    typeof value === 'object' &&
-    value.__type__ === 'Date' &&
-    value.__value__
-  ) {
+  if (value && typeof value === 'object' && value.__type__ === 'Date' && value.__value__) {
     return new Date(value.__value__)
   }
   return value

@@ -44,14 +44,9 @@ function ThemeSwitch({
   return (
     <div className={cm('flex', 'flex-col', 'gap-1')}>
       <div
-        className={cm(
-          'dropdown',
-          directionCssMap[direction],
-          alignCssMap[align],
-          {
-            'dropdown-hover': hover,
-          },
-        )}
+        className={cm('dropdown', directionCssMap[direction], alignCssMap[align], {
+          'dropdown-hover': hover,
+        })}
       >
         <div role='button' className={cm('btn', 'm-1')}>
           切换主题

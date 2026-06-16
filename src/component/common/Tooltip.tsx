@@ -1,8 +1,7 @@
+import * as TooltipPrimitive from '@radix-ui/react-tooltip'
 import { ReactNode } from 'react'
 
 import { cn } from '@/util/style'
-
-import * as TooltipPrimitive from '@radix-ui/react-tooltip'
 
 interface TooltipProps {
   children: ReactNode
@@ -11,17 +10,9 @@ interface TooltipProps {
   skipDelayDuration?: number
 }
 
-function Tooltip({
-  children,
-  tip,
-  delayDuration,
-  skipDelayDuration,
-}: TooltipProps) {
+function Tooltip({ children, tip, delayDuration, skipDelayDuration }: TooltipProps) {
   return (
-    <TooltipPrimitive.Provider
-      delayDuration={delayDuration}
-      skipDelayDuration={skipDelayDuration}
-    >
+    <TooltipPrimitive.Provider delayDuration={delayDuration} skipDelayDuration={skipDelayDuration}>
       <TooltipPrimitive.Root>
         <TooltipPrimitive.Trigger asChild>{children}</TooltipPrimitive.Trigger>
         <TooltipPrimitive.Portal>
@@ -40,9 +31,7 @@ function Tooltip({
             )}
           >
             {tip}
-            <TooltipPrimitive.Arrow
-              className={cn('fill-gray-900/50', 'dark:fill-gray-300/50')}
-            />
+            <TooltipPrimitive.Arrow className={cn('fill-gray-900/50', 'dark:fill-gray-300/50')} />
           </TooltipPrimitive.Content>
         </TooltipPrimitive.Portal>
       </TooltipPrimitive.Root>

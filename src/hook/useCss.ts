@@ -45,10 +45,7 @@ interface useCssProp {
 export function useCss({
   initCss,
   clean = true,
-}: useCssProp): [
-  string | undefined,
-  Dispatch<React.SetStateAction<string | undefined>>,
-] {
+}: useCssProp): [string | undefined, Dispatch<React.SetStateAction<string | undefined>>] {
   const [css, setCss] = useState(initCss)
   useEffect(() => {
     if (css) {

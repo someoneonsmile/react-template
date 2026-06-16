@@ -31,9 +31,7 @@ export default function HeadContent({
         className,
       )}
     >
-      <div className={cm('flex-none', 'overflow-hidden', headClassName)}>
-        {head}
-      </div>
+      <div className={cm('flex-none', 'overflow-hidden', headClassName)}>{head}</div>
       <div className={cm('flex-1', contentClassName)}>{children}</div>
     </div>
   )

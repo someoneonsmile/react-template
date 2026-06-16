@@ -1,9 +1,10 @@
 import { DEFAULT } from '@/constant'
+// import { HighOrders, Orders } from '@/util/sort'
+import { isPreferDark } from '@/util/style'
+
 import kanagawaThemeUrl from '@/css/theme/kanagawa.css?url'
 import kimiThemeUrl from '@/css/theme/kimi.css?url'
 import nordThemeUrl from '@/css/theme/nord.css?url'
-// import { HighOrders, Orders } from '@/util/sort'
-import { isPreferDark } from '@/util/style'
 
 export interface ThemeFilterType {
   name?: string
@@ -15,10 +16,7 @@ export type ThemeType = Required<ThemeFilterType> & {
   displayName?: string
 }
 
-export type ThemeContextType = [
-  ThemeFilterType,
-  undefined | ((value: ThemeFilterType) => void),
-]
+export type ThemeContextType = [ThemeFilterType, undefined | ((value: ThemeFilterType) => void)]
 
 export type LightDarkMode = 'light' | 'dark' | undefined
 

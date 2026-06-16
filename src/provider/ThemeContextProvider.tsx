@@ -21,17 +21,13 @@ function ThemeContextProvider({ children }: ThemeContextProviderProps) {
   const theme = getTheme(themeFilter)
   const themeCssUrl = theme?.url
 
-  const [lightDarkMode, setLightDarkMode] = useStore<LightDarkMode>(
-    'light-dark-mode',
-    {
-      defaultValue: undefined,
-    },
-  )
+  const [lightDarkMode, setLightDarkMode] = useStore<LightDarkMode>('light-dark-mode', {
+    defaultValue: undefined,
+  })
 
   const isPreferDark = useMatchMedia('(prefers-color-scheme: dark)')
 
-  const lightDarkModeCalc: LightDarkMode =
-    lightDarkMode ?? (isPreferDark ? 'dark' : 'light')
+  const lightDarkModeCalc: LightDarkMode = lightDarkMode ?? (isPreferDark ? 'dark' : 'light')
 
   useEffectCssLink(themeCssUrl)
   useEffect(() => {
@@ -46,15 +42,7 @@ function ThemeContextProvider({ children }: ThemeContextProviderProps) {
 
   return (
     <>
-      <ThemeContext
-        value={[
-          theme,
-          themeFilter,
-          setThemeFilter,
-          lightDarkMode,
-          setLightDarkMode,
-        ]}
-      >
+      <ThemeContext value={[theme, themeFilter, setThemeFilter, lightDarkMode, setLightDarkMode]}>
         {children}
       </ThemeContext>
     </>

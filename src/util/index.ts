@@ -49,10 +49,7 @@ export const listToMap = <T, K, V>(list: T[], f: (t: T) => [K, V]) => {
   return new Map<K, V>(list.map(f))
 }
 
-export const memoizeListToMap = memoizeWith(
-  (list, f) => objectHash({ list, f }),
-  listToMap,
-)
+export const memoizeListToMap = memoizeWith((list, f) => objectHash({ list, f }), listToMap)
 
 export const nullToUndefined = <T>(t: Maybe<T>) => {
   if (t === null) {

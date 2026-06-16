@@ -1,10 +1,5 @@
 import { ReactNode } from 'react'
-import {
-  Navigate,
-  Outlet,
-  RouterProvider,
-  createBrowserRouter,
-} from 'react-router'
+import { Navigate, Outlet, RouterProvider, createBrowserRouter } from 'react-router'
 
 import SideContent from '@/layout/SideContent'
 import { cm } from '@/util/style'

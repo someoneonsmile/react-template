@@ -10,10 +10,4 @@ export type ThemeContextType = [
   undefined | ((value: LightDarkMode) => void),
 ]
 
-export default createContext<ThemeContextType>([
-  getTheme(),
-  {},
-  undefined,
-  undefined,
-  undefined,
-])
+export default createContext<ThemeContextType>([getTheme(), {}, undefined, undefined, undefined])

@@ -7,9 +7,7 @@ export interface StoreItemOptions<T> {
   onError?: (e: unknown) => void
 }
 
-function defaultOptions<T>(): Required<
-  Omit<StoreItemOptions<T>, 'defaultValue'>
-> {
+function defaultOptions<T>(): Required<Omit<StoreItemOptions<T>, 'defaultValue'>> {
   return {
     marshaler: json,
     storage: getStorage(),
@@ -56,10 +54,7 @@ export class StoreItem<T> {
         this.options.storage.removeItem(this.key)
         return
       }
-      this.options.storage.setItem(
-        this.key,
-        this.options.marshaler.marshal(value),
-      )
+      this.options.storage.setItem(this.key, this.options.marshaler.marshal(value))
     } catch (e) {
       this.options.onError(e)
     }

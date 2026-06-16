@@ -23,12 +23,7 @@ function useMouseRef(elementRef: RefObject<Element>) {
   useEffect(() => {
     const moveHandler = (event: MouseEvent) => {
       if (elementRef && elementRef.current) {
-        const {
-          left,
-          top,
-          width: elW,
-          height: elH,
-        } = elementRef.current!.getBoundingClientRect()
+        const { left, top, width: elW, height: elH } = elementRef.current!.getBoundingClientRect()
         const posX = left + window.pageXOffset
         const posY = top + window.pageYOffset
         const elX = event.pageX - posX

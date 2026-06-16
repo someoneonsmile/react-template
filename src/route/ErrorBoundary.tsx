@@ -19,82 +19,57 @@ function ErrorBoundary() {
   // 这里采用主题中的 vibrant（主色）、ethereal（背景）、subtle（卡片背景）、elegant（文字）等
   return (
     <div
-      className='min-h-screen flex flex-col items-center justify-center font-sans'
+      className='flex min-h-screen flex-col items-center justify-center font-sans'
       style={{
         background:
           'linear-gradient(135deg, var(--color-ethereal-light, #F0F5FF) 0%, var(--color-ethereal, #E0E8F9) 100%)',
       }}
     >
       <div
-        className='rounded-2xl shadow-xl px-8 py-12 max-w-md w-full text-center'
+        className='w-full max-w-md rounded-2xl px-8 py-12 text-center shadow-xl'
         style={{
           background: 'var(--color-subtle-light, #F0F0F0)',
         }}
       >
-        <svg
-          width='64'
-          height='64'
-          viewBox='0 0 64 64'
-          fill='none'
-          className='mx-auto mb-6'
-        >
-          <circle
-            cx='32'
-            cy='32'
-            r='32'
-            fill='var(--color-vibrant, #FF6347)'
-            opacity='0.15'
-          />
+        <svg width='64' height='64' viewBox='0 0 64 64' fill='none' className='mx-auto mb-6'>
+          <circle cx='32' cy='32' r='32' fill='var(--color-vibrant, #FF6347)' opacity='0.15' />
           <path
             d='M32 18v18'
             stroke='var(--color-vibrant, #FF6347)'
             strokeWidth='3'
             strokeLinecap='round'
           />
-          <circle
-            cx='32'
-            cy='44'
-            r='2.5'
-            fill='var(--color-vibrant, #FF6347)'
-          />
+          <circle cx='32' cy='44' r='2.5' fill='var(--color-vibrant, #FF6347)' />
         </svg>
         <h1
-          className='text-3xl font-bold mb-3'
+          className='mb-3 text-3xl font-bold'
           style={{ color: 'var(--color-vibrant-dark, #CC3B33)' }}
         >
           {title}
         </h1>
         {status && (
-          <div
-            className='text-lg mb-2'
-            style={{ color: 'var(--color-elegant, #708090)' }}
-          >
+          <div className='mb-2 text-lg' style={{ color: 'var(--color-elegant, #708090)' }}>
             状态码：{status}
           </div>
         )}
-        <p
-          className='mb-6'
-          style={{ color: 'var(--color-elegant-dark, #5A6E79)' }}
-        >
+        <p className='mb-6' style={{ color: 'var(--color-elegant-dark, #5A6E79)' }}>
           {message}
         </p>
         {error instanceof Error && (
           <details
-            className='rounded-lg p-3 text-sm text-left mb-4 break-all'
+            className='mb-4 rounded-lg p-3 text-left text-sm break-all'
             style={{
               background: 'var(--color-ethereal-light, #F0F5FF)',
               color: 'var(--color-elegant, #708090)',
             }}
           >
-            <summary className='cursor-pointer select-none'>
-              查看错误详情
-            </summary>
+            <summary className='cursor-pointer select-none'>查看错误详情</summary>
             <pre className='whitespace-pre-wrap'>{error.stack}</pre>
           </details>
         )}
         <button
           onClick={() => window.location.reload()}
-          className='rounded-lg px-8 py-2 text-base font-medium shadow transition-colors duration-200 mt-2'
+          className='mt-2 rounded-lg px-8 py-2 text-base font-medium shadow transition-colors duration-200'
           style={{
             background:
               'linear-gradient(90deg, var(--color-vibrant, #FF6347) 0%, var(--color-vibrant-light, #FF8C7F) 100%)',

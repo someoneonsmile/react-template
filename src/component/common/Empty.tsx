@@ -8,8 +8,8 @@ interface EmptyProps {
 
 function Empty({ tips }: EmptyProps) {
   return (
-    <div className='flex h-full w-full flex-col justify-center items-center gap-2'>
-      <EmptyRecord className='w-52 aspect-square' />
+    <div className='flex h-full w-full flex-col items-center justify-center gap-2'>
+      <EmptyRecord className='aspect-square w-52' />
       <div className='max-w-[70%]'>{tips}</div>
     </div>
   )

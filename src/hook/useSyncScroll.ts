@@ -47,14 +47,10 @@ const useSyncScroll = (...refs: RefObject<HTMLElement>[]) => {
       if (currentScrollRef.current !== currentRef.current) {
         return
       }
-      const radio =
-        e.target.scrollTop / (e.target.scrollHeight - e.target.clientHeight)
+      const radio = e.target.scrollTop / (e.target.scrollHeight - e.target.clientHeight)
       refs.forEach((ref) => {
         if (ref != currentRef && ref.current) {
-          ref.current.scrollTo(
-            0,
-            (ref.current.scrollHeight - ref.current.clientHeight) * radio,
-          )
+          ref.current.scrollTo(0, (ref.current.scrollHeight - ref.current.clientHeight) * radio)
         }
       })
     }

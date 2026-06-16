@@ -21,18 +21,8 @@ function SideContent({
   reverse,
 }: SideContentProps) {
   return (
-    <div
-      className={cm(
-        'flex',
-        { 'flex-row-reverse': reverse },
-        'h-full',
-        'w-full',
-        className,
-      )}
-    >
-      <div className={cm('flex-none', 'overflow-hidden', sideClassName)}>
-        {side}
-      </div>
+    <div className={cm('flex', { 'flex-row-reverse': reverse }, 'h-full', 'w-full', className)}>
+      <div className={cm('flex-none', 'overflow-hidden', sideClassName)}>{side}</div>
       <div className={cm('flex-1', contentCalssName)}>{children}</div>
     </div>
   )

@@ -21,25 +21,12 @@ function Input({ icon, className, ...rest }: InputProps) {
       )}
     >
       {icon && (
-        <div
-          className={cm(
-            'h-full',
-            'aspect-square',
-            'flex-none',
-            'place-center',
-            'select-none',
-          )}
-        >
+        <div className={cm('h-full', 'aspect-square', 'flex-none', 'place-center', 'select-none')}>
           <div className={cm('h-3/5', 'aspect-square')}>{icon}</div>
         </div>
       )}
       <input
-        className={cm(
-          'border-0',
-          'outline-hidden',
-          'focus:outline-hidden',
-          'w-full',
-        )}
+        className={cm('border-0', 'outline-hidden', 'focus:outline-hidden', 'w-full')}
         {...rest}
       />
     </div>

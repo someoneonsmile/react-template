@@ -8,12 +8,7 @@ function ProgressBar({ progress: p }: ProgressBarProps) {
   return (
     <>
       <div
-        className={cn(
-          'h-0',
-          'border-t-2',
-          'border-orange-700',
-          'transtion-[width]',
-        )}
+        className={cn('h-0', 'border-t-2', 'border-orange-700', 'transtion-[width]')}
         style={{ width: `${p}%` }}
       />
     </>
