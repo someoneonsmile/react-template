@@ -8,6 +8,7 @@
     "check": "tsc",
     "build": "tsc && vite build --mode=production --base=/dist",
     "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
     "preview": "vite preview",
     "barrelsby": "barrelsby --delete",
     "format": "oxfmt '**/*.{js,jsx,ts,tsx}'",

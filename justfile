@@ -5,6 +5,7 @@
 # just c == just check
 alias c := check
 alias l := lint
+alias lf := lint-fix
 
 # `just` 被调用而没有传入任何配方时，会运行第一个配方
 default:
@@ -19,11 +20,16 @@ dev:
 lint:
 	pnpm run lint
 
+lint-fix:
+	pnpm run lint:fix
+
 format:
 	pnpm run format
 
 check:
 	pnpm run check && pnpm run lint && pnpm run format:check
+
+fix: lint-fix format
 
 set-version version:
 	jaq '.version = "{{version}}"' package.json > package.json.temp && mv package.json.temp package.json
