@@ -58,6 +58,6 @@ export function useCss({
         }
       }
     }
-  }, [css])
+  }, [css, clean])
   return [css, setCss]
 }

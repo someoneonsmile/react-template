@@ -48,11 +48,8 @@ function ThemeSwitch({
           'dropdown-hover': hover,
         })}
       >
-        <div role='button' className={cm('btn', 'm-1')}>
-          切换主题
-        </div>
+        <button className={cm('btn', 'm-1')}>切换主题</button>
         <ul
-          tabIndex={0}
           className={cm(
             'menu',
             'dropdown-content',

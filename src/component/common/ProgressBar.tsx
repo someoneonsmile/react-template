@@ -1,7 +1,7 @@
 import { cn } from '@/util/style'
 
 interface ProgressBarProps {
-  progress: Number
+  progress: number
 }
 
 function ProgressBar({ progress: p }: ProgressBarProps) {

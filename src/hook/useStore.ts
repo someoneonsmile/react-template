@@ -8,7 +8,7 @@ export default function useStore<S>(
 ): [Readonly<S>, Dispatch<SetStateAction<S>>] {
   const storeItem = useMemo(() => {
     return new StoreItem(key, options)
-  }, [])
+  }, [key, options])
 
   const [value, setValue] = useState(() => storeItem.get())
 

@@ -3,7 +3,6 @@ import { DEFAULT } from '@/constant'
 import { isPreferDark } from '@/util/style'
 
 import kanagawaThemeUrl from '@/css/theme/kanagawa.css?url'
-import kimiThemeUrl from '@/css/theme/kimi.css?url'
 import nordThemeUrl from '@/css/theme/nord.css?url'
 
 export interface ThemeFilterType {
@@ -32,12 +31,6 @@ export const themes: ThemeType[] = [
     // displayName: 'kanagawa-dark',
     variance: DEFAULT,
     url: kanagawaThemeUrl,
-  },
-  {
-    name: 'kimi',
-    // displayName: 'kimi-light',
-    variance: DEFAULT,
-    url: kimiThemeUrl,
   },
 ]
 

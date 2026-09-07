@@ -94,7 +94,7 @@ function useKeyMapScroll(
     return () => {
       listenOn.removeEventListener('keydown', keyDownHandler as EventListener)
     }
-  }, [contentRef, contentRef.current])
+  }, [contentRef, contentRef.current, listenOnRoot])
 }
 
 export default useKeyMapScroll

@@ -15,7 +15,7 @@ export function assignRef<T = any>(ref: Ref<T> | null | undefined, value: T) {
 
   try {
     ref.current = value
-  } catch (error) {
+  } catch {
     throw new Error(`Cannot assign value '${value}' to ref '${ref}'`)
   }
 }
@@ -29,5 +29,6 @@ export function mergeRefs<T>(...refs: (Ref<T> | null | undefined)[]) {
 }
 
 export function useMergeRefs<T>(...refs: (Ref<T> | null | undefined)[]) {
+  // eslint-disable-next-line react-compiler/react-compiler
   return useMemo(() => mergeRefs(...refs), refs)
 }

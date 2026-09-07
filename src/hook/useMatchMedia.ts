@@ -7,6 +7,6 @@ export default function useMatchMedia(query: string) {
     const mediaQuery = window.matchMedia?.(query)
     mediaQuery?.addEventListener('change', onChange)
     return () => mediaQuery?.removeEventListener('change', onChange)
-  }, [])
+  }, [query])
   return matches
 }

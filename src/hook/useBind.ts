@@ -9,7 +9,7 @@ function useBind<T>(init: T) {
     bind: {
       value,
       onChange: (e: any) => {
-        e?.target?.value ?? e
+        setValue(e?.target?.value ?? e)
       },
     },
   }
