@@ -1,4 +1,4 @@
-import { ClassValue } from 'clsx'
+import type { ClassValue } from 'cn'
 import { ReactNode } from 'react'
 
 import { cm } from '@/util/style'

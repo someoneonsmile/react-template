@@ -22,7 +22,7 @@
     "ahooks": "^3.9.7",
     "apca-w3": "^0.1.9",
     "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
+    "cn": "^0.2.5",
     "color": "^5.0.3",
     "crypt-js": "^1.0.4",
     "crypto-js": "^4.2.0",
@@ -45,7 +45,6 @@
     "react-use": "^17.6.0",
     "react-virtuoso": "^4.18.7",
     "swiper": "^12.2.0",
-    "tailwind-merge": "^3.6.0",
     "ulid": "^3.0.2",
     "zustand": "^5.0.14"
   },
